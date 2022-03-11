@@ -127,11 +127,17 @@ function Sidebar(){
 
 function LoggedUser(){
   return (
+    <User username="catanacomics" name="Catana" />
+  );
+}
+
+function User(props){
+  return (
     <div className="user">
-      <img src="assets/img/catanacomics.svg" alt=""/>
+      <img src={`assets/img/${props.username}.svg`} alt=""/>
       <div className="text">
-        <strong>catanacomics</strong>
-        Catana
+        <strong>{props.username}</strong>
+        {props.name}
       </div>
     </div>
   );
