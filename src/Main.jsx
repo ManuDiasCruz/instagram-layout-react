@@ -77,22 +77,22 @@ function Posts(){
 function Post(props){
   return(
     <div className="post">
-      <div className="topo">
+      <div className="header-post">
         <div className="user">
           <img src={`assets/img/${props.username}.svg`} alt=""/>
           {props.username}
         </div>
-        <div className="acoes">
+        <div className="more">
           <ion-icon name="ellipsis-horizontal"></ion-icon>
         </div>
       </div>
 
-      <div className="conteudo">
+      <div className="content">
         <img src={`assets/img/${props.content}.svg`} alt=""/>
       </div>
 
-      <div className="fundo">
-        <div className="acoes">
+      <div className="footer-post">
+        <div className="iteractions">
           <div>
             <ion-icon name="heart-outline"></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -103,7 +103,7 @@ function Post(props){
         </div>
         </div>
 
-        <div className="curtidas">
+        <div className="users-iteractions">
           <img src={`assets/img/${props.newestLike}.svg`} alt=""/>
           <div className="text">
             Curtido por <strong>respondeai</strong> e <strong>outras {props.numberOfLikes} pessoas</strong>
